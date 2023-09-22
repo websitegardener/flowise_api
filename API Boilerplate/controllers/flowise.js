@@ -21,6 +21,9 @@ export const createPrediction = async (req, res) => {
         body: JSON.stringify(flowiseData),
       }
     );
+    
+    const data = await response.json();
+    console.log(data);
 
     res.status(200).json({ message: "Demo Response" });
   } catch (error) {
